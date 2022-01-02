@@ -98,9 +98,9 @@ class SportsWalking(Training):
 
     def get_spent_calories(self) -> float:
         minutes = self.duration * 60
-        spent_calories = (self.K1 * self.weight + (
+        spent_calories = ((self.K1 * self.weight + (
                 self.get_mean_speed() ** 2 // self.height)
-                          * self.K2 * self.weight) * minutes
+                          * self.K2 * self.weight) * minutes)
         return spent_calories
 
 
